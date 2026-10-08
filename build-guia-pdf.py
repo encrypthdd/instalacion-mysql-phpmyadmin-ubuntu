@@ -10,7 +10,11 @@ from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle, XPreformatted,
 )
 
-OUT = r"C:\Users\cflores\qa-mysql-setup\Guia-instalacion-QA.pdf"
+import os
+
+# El PDF se genera junto a este script, sea cual sea la maquina
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                   "Guia-instalacion-QA.pdf")
 
 ACCENT = colors.HexColor("#15605C")
 ACCENT_SOFT = colors.HexColor("#E6F0EF")
@@ -176,7 +180,7 @@ S.append(bullets([
 S.append(KeepTogether([
     step(1, "Copiar los scripts al servidor"),
     Spacer(1, 6),
-    code("cd C:\\Users\\cflores\\qa-mysql-setup\n"
+    code("cd C:\\ruta\\a\\qa-mysql-setup\n"
          "scp 01-install-mysql-pma.sh 02-import-dump.sh 03-verify.sh USUARIO@IP:~/",
          "En tu Windows (PowerShell)"),
 ]))

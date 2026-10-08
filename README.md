@@ -19,7 +19,7 @@ Los tres son **re-ejecutables**: no duplican nada y no regeneran passwords ya cr
 Desde PowerShell en Windows:
 
 ```powershell
-cd C:\Users\cflores\qa-mysql-setup
+cd C:\ruta\a\qa-mysql-setup
 scp 01-install-mysql-pma.sh 02-import-dump.sh 03-verify.sh USUARIO@IP_DEL_SERVIDOR:~/
 ```
 
