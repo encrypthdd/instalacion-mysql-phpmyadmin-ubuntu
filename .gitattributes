@@ -1,0 +1,13 @@
+# Los scripts se ejecutan en Linux: con CRLF fallan con
+# "bad interpreter: /usr/bin/env bash^M". Siempre LF.
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Binarios: Git no debe tocarles los saltos de linea (corrompe el archivo)
+*.pdf binary
+*.png binary
+*.jpg binary
+*.gz  binary

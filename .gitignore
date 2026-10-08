@@ -1,0 +1,17 @@
+# Dumps de base de datos: contienen datos reales (usuarios, sesiones, catalogo).
+# Nunca deben acabar en el repositorio.
+*.sql
+*.sql.gz
+*.sql.bz2
+*.sql.zst
+
+# Credenciales y claves, por si alguna vez se copian aqui
+*.pem
+*.key
+.env
+.qa-db-credentials
+
+# Temporales
+__pycache__/
+*.pyc
+*.log
